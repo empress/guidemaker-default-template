@@ -8,5 +8,17 @@ module.exports = {
 
   treeForPublic: function() {
     return new Funnel(join(this.root, 'public'));
-  }
+  },
+
+  config(env, config) {
+    let existingFonts = config.googleFonts || [];
+
+    return {
+      googleFonts: [
+        ...existingFonts,
+        'Fredericka+the+Great',
+        'Roboto:300'
+      ]
+    }
+  },
 };

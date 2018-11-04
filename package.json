@@ -1,6 +1,6 @@
 {
-  "name": "guidemaker-ember-template",
-  "version": "0.2.3",
+  "name": "guidemaker-default-template",
+  "version": "0.0.0",
   "description": "The default blueprint for ember-cli addons.",
   "keywords": [
     "ember-addon"
@@ -24,6 +24,7 @@
     "broccoli-funnel": "^2.0.1",
     "ember-auto-import": "^1.2.15",
     "ember-cli-babel": "^6.6.0",
+    "ember-cli-google-fonts": "^2.16.2",
     "ember-cli-htmlbars": "^2.0.1",
     "ember-cli-sass": "^8.0.1",
     "ember-cli-showdown": "^4.4.4",
@@ -33,7 +34,6 @@
     "ember-meta": "^0.3.0",
     "ember-power-select": "^2.0.9",
     "ember-prism": "^0.3.0",
-    "ember-styleguide": "^2.3.3",
     "ember-tether": "^1.0.0",
     "recast": "^0.15.3",
     "sass": "^1.14.3",

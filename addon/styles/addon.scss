@@ -1,3 +1,9 @@
+@import "variables";
+
+body {
+  font-family: -apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+
 @font-face {
   font-family: 'fontello';
   src: url("../fonts/fontello.eot?60624967");
@@ -688,7 +694,6 @@ button {
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-family: "Roboto", "Helvetica Neue", "Helvetica", sans-serif;
   font-size: 1rem;
   font-weight: 600;
   line-height: 1;
@@ -733,7 +738,6 @@ input,
 label,
 select {
   display: block;
-  font-family: "Roboto", "Helvetica Neue", "Helvetica", sans-serif;
   font-size: 1rem;
 }
 
@@ -772,7 +776,6 @@ textarea {
   border-radius: 3px;
   box-shadow: inset 0 1px 3px rgba(0,0,0,0.06);
   box-sizing: border-box;
-  font-family: "Roboto", "Helvetica Neue", "Helvetica", sans-serif;
   font-size: 1rem;
   margin-bottom: 0.75em;
   padding: 0.5em;
@@ -973,7 +976,7 @@ p {
 }
 
 a {
-  color: #c7341f;
+  color: #4E555C;
   transition: color 0.1s linear;
   text-decoration: underline;
 }
@@ -995,12 +998,6 @@ hr {
   border-right: none;
   border-top: none;
   margin: 1.5em 0;
-}
-
-img,
-picture {
-  margin: 0;
-  max-width: 100%;
 }
 
 em {
@@ -1192,16 +1189,22 @@ body {
 }
 
 .container {
-  max-width: 60em;
+  max-width: 80em;
   margin-left: auto;
   margin-right: auto;
   padding: 0 1em;
 }
 
-.container::after {
-  clear: both;
-  content: "";
-  display: table;
+.space-between {
+  justify-content: space-between;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.text-align-right {
+  text-align: right;
 }
 
 .sidebar {
@@ -1522,3 +1525,5 @@ article.x404 img {
 @import "code-block-file-name";
 @import "prism-overrides";
 @import "search-input";
+@import "header";
+@import "footer";

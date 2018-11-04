@@ -4,7 +4,9 @@ import { inject as service } from '@ember/service';
 export default Component.extend({
   tagName: 'article',
   classNames: 'chapter',
+  guidemaker: service(),
   page: service(),
+
   didRender() {
 
     let nodeList = this.$('pre:not(.no-line-numbers) > code');

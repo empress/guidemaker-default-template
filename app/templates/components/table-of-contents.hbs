@@ -3,7 +3,7 @@
   {{#unless (or page.skipToc (get page 'skip-toc'))}}
     <li class="{{tocLevel}} {{if (eq currentPage.url page.url) 'selected'}}">
       {{#if page.pages}}
-        {{#cp-panel open=(eq currentSection.id page.id) as |p|}}
+        {{#cp-panel open=(unless guidemaker.collapseToc true (eq currentSection.id page.id)) as |p|}}
           {{#if fastboot.isFastBoot}}
             {{#link-to 'version.show' page.id activeClass="selected" class="cp-Panel-toggle" data-test-toc-link=page.title}}
               {{page.title}}

@@ -4,6 +4,7 @@ import { inject as service } from '@ember/service';
 
 export default Component.extend({
   fastboot: service(),
+  guidemaker: service(),
 
   level: '0',
   tagName: 'ol',

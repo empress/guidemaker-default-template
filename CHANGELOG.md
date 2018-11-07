@@ -1,4 +1,9 @@
 
+0.3.0 / 2018-11-07
+==================
+
+  * moving ember-meta implementatoin into guidemaker core from @mansona 
+
 0.2.1 / 2018-11-07
 ==================
 

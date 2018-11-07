@@ -35,7 +35,6 @@
     "ember-power-select": "^2.0.9",
     "ember-prism": "^0.3.0",
     "ember-tether": "^1.0.0",
-    "recast": "^0.15.3",
     "sass": "^1.14.3",
     "showdown-section-groups": "^0.3.0"
   },

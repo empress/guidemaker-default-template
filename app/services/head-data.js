@@ -8,16 +8,23 @@ import config from '../config/environment';
 
 export default HeadData.extend({
   page: service(),
+  guidemaker: service(),
   currentRouteModel: computed('routeName', function() {
     return getOwner(this).lookup(`route:${this.routeName}`).get('currentModel.content');
   }),
 
   title: computed('routeName', function() {
     if(!this.page.currentPage || !this.page.currentSection) {
-      return 'Ember Guides';
+      return this.guidemaker.title;
     }
 
-    return `${this.page.currentPage.title} - ${this.page.currentSection.title} - Ember Guides`
+    let title = `${this.page.currentPage.title} - ${this.page.currentSection.title}`;
+
+    if(this.guidemaker.title) {
+      title +=  ` - ${this.guidemaker.title}`
+    }
+
+    return title;
   }),
 
   description: computed('routeName', function() {
@@ -43,6 +50,12 @@ export default HeadData.extend({
       return null;
     }
 
+    let url = config['ember-meta'].url;
+
+    if(!isPresent(url)) {
+      return;
+    }
+
     if (isPresent(this.currentRouteModel.canonical)) {
       return this.currentRouteModel.canonical;
     }
@@ -55,6 +68,20 @@ export default HeadData.extend({
       slug = `release/${this.currentRouteModel.id.replace(/\/index$/, '')}`
     }
 
-    return `${config['ember-meta'].url}${slug}/`;
+    return `${url}${slug}/`;
   }),
+
+  url: computed('routeName', function() {
+    let url = config['ember-meta'].url;
+
+    if(!isPresent(url)) {
+      return;
+    }
+
+    const slug = this.get('slug');
+    if (slug) {
+      url = `${url}${slug}/`;
+    }
+    return url;
+  })
 });

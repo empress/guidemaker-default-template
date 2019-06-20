@@ -1,4 +1,10 @@
 
+0.5.2 / 2019-06-20
+==================
+
+  * fixing travis
+  * Add repo url to package.json so it links here from npm - from @jenweber
+
 0.5.1 / 2019-02-11
 ==================
 

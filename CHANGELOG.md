@@ -1,4 +1,10 @@
 
+1.0.0 / 2019-07-15
+==================
+
+  * Update dependencies #3 from @mansona
+  * No breaking changes for 1.0 release
+
 0.5.2 / 2019-06-20
 ==================
 

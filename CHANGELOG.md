@@ -1,4 +1,10 @@
 
+1.1.1 / 2019-08-08
+==================
+
+  * fixing mention of Ember in UI
+  * fixing ember-power-select
+
 1.1.0 / 2019-07-15
 ==================
 

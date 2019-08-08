@@ -21,4 +21,13 @@ module.exports = {
       ]
     }
   },
+
+  contentFor: function(type, config) {
+    if (type === 'body-footer') {
+      var emberBasicDropdown = this.addons.find(addon => addon.name === 'ember-power-select');
+      return emberBasicDropdown.contentFor(type, config);
+    } else {
+      return '';
+    }
+  }
 };

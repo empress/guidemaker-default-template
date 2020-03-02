@@ -5,7 +5,8 @@ module.exports = function(environment) {
     modulePrefix: 'dummy',
     environment,
     rootURL: '/',
-    locationType: 'auto',
+    locationType: 'trailing-history',
+
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -20,7 +21,14 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    }
+    },
+
+    guidemaker: {
+      title: 'Guidemaker Default Template',
+      description: 'Guides - Built with Guidemaker'
+    },
+
+    historySupportMiddleware: true
   };
 
   if (environment === 'development') {

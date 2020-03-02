@@ -6,6 +6,22 @@ const { join } = require('path');
 module.exports = {
   name: require('./package').name,
 
+  options: {
+    autoImport: {
+      webpack: {
+        node: {
+          process: true,
+        },
+      },
+    },
+    sassOptions: {
+      includePaths: [
+        'node_modules/ember-power-select/app/styles',
+        'node_modules/ember-basic-dropdown/app/styles',
+      ]
+    }
+  },
+
   treeForPublic: function() {
     return new Funnel(join(this.root, 'public'));
   },

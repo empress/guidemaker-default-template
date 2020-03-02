@@ -1,0 +1,20 @@
+- title: "Guides and Tutorials"
+  url: 'index'
+  skip_toc: true
+  pages:
+    - title: "Guides"
+      url: ""
+
+- title: "Getting Started"
+  url: 'getting-started'
+  pages:
+    - title: "Introduction"
+      url: "index"
+    - title: "Editing"
+      url: "editing"
+
+- title: "Old Content"
+  url: "old-content"
+  pages:
+    - title: "Introduction"
+      url: "index"

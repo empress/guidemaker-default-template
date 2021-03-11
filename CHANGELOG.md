@@ -1,3 +1,10 @@
+v3.0.0 / 2021-03-11
+==================
+
+  * support deployment to subdirectory #6 from @jelhan
+  * Update Dependencies #9 from @mansona
+  * Add a basic test that visits all pages #8 from @mansona
+
 v2.0.0 / 2020-03-02
 ==================
 

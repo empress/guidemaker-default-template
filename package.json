@@ -14,6 +14,7 @@
   },
   "scripts": {
     "build": "ember build --environment=production",
+    "changelog": "auto-changelog --template changelog.template --unreleased-only --prepend --load-github-issue-data --github-cache-dir .changelog",
     "lint": "npm-run-all --aggregate-output --continue-on-error --parallel 'lint:!(fix)'",
     "lint:fix": "npm-run-all --aggregate-output --continue-on-error --parallel lint:*:fix",
     "lint:hbs": "ember-template-lint .",
@@ -48,6 +49,7 @@
     "@ember/test-helpers": "^2.2.0",
     "@glimmer/component": "^1.0.3",
     "@glimmer/tracking": "^1.0.3",
+    "auto-changelog": "github:mansona/auto-changelog#epic",
     "babel-eslint": "^10.1.0",
     "broccoli-asset-rev": "^3.0.0",
     "ember-cli": "~3.25.2",

@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { A as emberArray } from '@ember/array';
 import { isArray as isEmberArray } from '@ember/array';
 import { helper } from '@ember/component/helper';

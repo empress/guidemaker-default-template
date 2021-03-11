@@ -15,7 +15,7 @@ jobs:
           node-version: '14'
       - run: npm install -g npm@7
       - run: npm install
-      - run: npx lint-to-the-future output -o lttfOutput --rootUrl empress-blog --previous-results https://empress.github.io/empress-blog/data.json
+      - run: npx lint-to-the-future output -o lttfOutput --rootUrl guidemaker-default-template --previous-results https://empress.github.io/guidemaker-default-template/data.json
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:

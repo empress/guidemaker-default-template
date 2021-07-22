@@ -12,3 +12,11 @@
       url: "index"
     - title: "Editing"
       url: "editing"
+
+- title: "Examples"
+  url: 'examples'
+  pages:
+    - title: "Basic Markdown"
+      url: "index"
+    - title: "Syntax Highlighting"
+      url: "syntax-highlighting"

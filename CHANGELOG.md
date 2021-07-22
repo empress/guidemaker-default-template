@@ -1,3 +1,8 @@
+v3.1.0 / 2021-07-22
+==================
+
+  * Use ember-showdown-prism to provide the code syntax highlighting #10 from @mansona
+
 v3.0.0 / 2021-03-11
 ==================
 

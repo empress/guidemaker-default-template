@@ -1,3 +1,10 @@
+v4.0.0 / 2021-07-22
+==================
+
+  * [BREAKING] Remove "scroll to top on click" from &lt;LinkTo&gt; override #11 from @mansona
+
+You need to be using at least guidemaker v2.6.0 to have automatic scroll on navigate behaviour from now on. If you are upgrading guidemaker-default-template make sure to upgrade guidemaker too
+
 v3.1.0 / 2021-07-22
 ==================
 

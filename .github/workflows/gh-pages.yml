@@ -9,4 +9,4 @@ jobs:
   deploy:
     uses: mansona/lint-to-the-future-dashboard-action/.github/workflows/dashboard.yml@main
     with:
-      folder: '/'
+      folder: ''

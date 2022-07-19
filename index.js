@@ -8,13 +8,6 @@ module.exports = {
   name: require('./package').name,
 
   options: {
-    autoImport: {
-      webpack: {
-        node: {
-          process: true,
-        },
-      },
-    },
     sassOptions: {
       includePaths: [
         'node_modules/ember-power-select/app/styles',

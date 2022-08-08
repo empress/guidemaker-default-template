@@ -5,7 +5,6 @@ import { set } from '@ember/object';
 import { later } from '@ember/runloop';
 import algoliasearch from 'algoliasearch';
 import { task, timeout } from 'ember-concurrency';
-import { denodeify } from 'rsvp';
 
 import layout from '../templates/components/search-input';
 
@@ -32,7 +31,6 @@ export default Component.extend({
     if(algoliaId && algoliaKey && indexName) {
       this.client = algoliasearch(algoliaId, algoliaKey);
       this.index = this.client.initIndex(indexName);
-      this.searchFunction = denodeify(this.index.search.bind(this.index));
     }
   },
 
@@ -52,7 +50,7 @@ export default Component.extend({
       searchObj.facetFilters = [[`version:${this.projectVersion}`]];
     }
 
-    let res = yield this.searchFunction(searchObj);
+    let res = yield this.index.search(searchObj);
 
     return set(this, 'response', res);
   }).restartable(),

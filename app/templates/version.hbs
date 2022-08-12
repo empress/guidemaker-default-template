@@ -1,7 +1,7 @@
-{{!-- template-lint-disable no-action no-curly-component-invocation no-implicit-this --}}
+{{!-- template-lint-disable no-action no-curly-component-invocation --}}
 <aside class="sidebar">
-  {{#if versions}}
-    <PowerSelect @ariaLabel={{model.version}} @selected={{model.version}} @options={{this.versions}} @onChange={{action 'selectVersion'}} as |version|>
+  {{#if this.versions}}
+    <PowerSelect @ariaLabel={{@model.version}} @selected={{@model.version}} @options={{this.versions}} @onChange={{action 'selectVersion'}} as |version|>
       {{shorten-version version}}
     </PowerSelect>
   {{/if}}
@@ -9,8 +9,8 @@
   <input id="toc-toggle" class="toc-toggle visually-hidden" type="checkbox" />
   <label for="toc-toggle">Table of Contents <span class="visually-hidden">toggle</span></label>
 
-  <nav class='toc-container {{if versions 'versions'}}' aria-label='table of contents'>
-    {{table-of-contents data=model.pages version=model.version currentPage=page.currentPage currentSection=page.currentSection}}
+  <nav class='toc-container {{if this.versions 'versions'}}' aria-label='table of contents'>
+    {{table-of-contents data=@model.pages version=@model.version currentPage=this.page.currentPage currentSection=this.page.currentSection}}
   </nav>
 
   {{!-- <%= link_to "&#11014; Back to Top".html_safe, "#", class: "back-to-top" %> --}}

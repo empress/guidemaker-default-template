@@ -1,3 +1,17 @@
+v5.0.0 / 2022-08-14
+==================
+
+  * Update dependencies to fix CI #21 from @mansona
+  * remove link-to override #28 from @mansona
+  * fix no-implicit-this and template deprecations #27 from @mansona
+  * remove ember-cli-google-fonts #26 from @mansona
+  * fix the contains helper that never worked #25 from @mansona
+  * update algolia #23 from @mansona
+  * add no deprecations ember-try config #20 from @mansona
+  * Update to Ember 3.28 with ember-cli-update  #19 from @mansona
+  * breaking: drop support for Node &lt; 14 #17 from @mansona
+  * Update lint-to-the-future #12 from @mansona
+
 v4.0.0 / 2021-07-22
 ==================
 

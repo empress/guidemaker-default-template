@@ -65,11 +65,6 @@ label[for="toc-toggle"]:after {
   border-color: transparent transparent #b67d47 transparent;
   border-width: 0 4px 5px 4px;
 }
-@media screen and (min-width: 53.75em) {
-  label[for="toc-toggle"] {
-    display: none;
-  }
-}
 
 .toc-container.versions {
   border-top: 1px solid #F8E7CF;
@@ -83,15 +78,7 @@ label[for="toc-toggle"]:after {
 .toc-toggle:checked ~ .toc-container {
   display: block;
 }
-@media screen and (min-width: 53.75em) {
-  .toc-container {
-    display: block;
-  }
 
-  .toc-container[style] {
-    display: block !important;
-  }
-}
 
 .toc-container a {
   text-decoration: none;

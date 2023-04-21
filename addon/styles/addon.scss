@@ -1210,18 +1210,6 @@ body {
   background-color: #FDFDFD;
   margin: 0;
 }
-@media screen and (min-width: 53.75em) {
-  main {
-    display: flex;
-  }
-}
-
-.container {
-  max-width: 80em;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 1em;
-}
 
 .space-between {
   justify-content: space-between;
@@ -1242,49 +1230,10 @@ body {
   position: relative;
   z-index: 1;
 }
-@media screen and (min-width: 53.75em) {
-  .sidebar {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 27.49666%;
-    border-bottom: 0;
-    border-right: 1px solid #F8E7CF;
-    padding: 3em 1.618em 3em 0;
-  }
 
-  .sidebar:last-child {
-    margin-right: 0;
-  }
-
-  .sidebar::before {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: -100vw;
-    content: "";
-    display: block;
-    background-color: #FFFDF9;
-    z-index: -1;
-  }
-}
 
 .sidebar .ember-power-select-trigger {
   margin-bottom: 1em;
-}
-
-article {
-  padding: 3em 0;
-  @media screen and (min-width: 53.75em) {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 70.14568%;
-  }
-  &:last-child {
-    margin-right: 0;
-  }
 }
 
 article .edit-page {
@@ -1555,3 +1504,4 @@ article.x404 img {
 @import "footer";
 @import "layout";
 @import "code";
+@import "on-this-page";

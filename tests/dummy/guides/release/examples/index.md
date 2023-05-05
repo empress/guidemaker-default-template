@@ -70,3 +70,15 @@ Asterisks
 ___
 
 Underscores
+
+# Native HTML
+
+<div class="cta" ...attributes>
+  <div class="cta-note">
+    <div class="cta-note-body">
+      <div class="cta-note-heading" data-test-note-heading>Zoey says...</div>
+      <div class="cta-note-message">This is a block that contains native HTML</div>
+    </div>
+    <img src="/images/mascots/zoey.png" role="presentation" alt="">
+  </div>
+</div>

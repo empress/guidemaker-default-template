@@ -1,0 +1,46 @@
+// Initially copied from https://github.com/ember-learn/ember-styleguide/blob/83c60ee940f907bbbf35d582cffffc7c7d949a12/addon/styles/components/es-note.css
+
+.cta {
+  background-color: $color-yellow-light;
+  border-radius: $radius-lg;
+  margin: $spacing-1 auto;
+  max-width: 90%;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta .cta-note {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cta-note .cta-note-body {
+  padding: $spacing-2;
+  padding-left: $spacing-4;
+}
+
+.cta-note .cta-note-heading {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-3;
+  line-height: $line-height-lg;
+  margin-bottom: $spacing-1;
+}
+
+.cta-note img {
+  margin: $spacing-2;
+  transform: rotate(15deg);
+  object-fit: contain;
+}
+
+.cta:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0px;
+  height: 0px;
+  border-radius: 0 0 $radius-lg 0;
+  border-width: 16px;
+  border-color: $color-gray-100 $color-yellow $color-yellow $color-gray-100;
+  border-style: solid;
+}

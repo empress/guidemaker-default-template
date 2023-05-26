@@ -26,15 +26,16 @@ module.exports = function (environment) {
 
     guidemaker: {
       title: 'Guidemaker Ember Locale Template',
-      sourceRepo: 'https://github.com/DazzlingFugu/ember-fr-guides-source',
       description: 'Guides - Built with Guidemaker',
+      sourceRepo: 'https://github.com/DazzlingFugu/ember-fr-guides-source',
+      host: {
+        name: 'Netlify',
+        site: 'https://app.netlify.com',
+      },
       mascots: {
         tomster: { image: '/images/mascots/tomster.png', name: 'Tomster' },
         zoey: { image: '/images/mascots/zoey.png', name: 'Zoey' },
       },
-      components: {
-        footer: 'dummy-footer'
-      }
     },
 
     historySupportMiddleware: true

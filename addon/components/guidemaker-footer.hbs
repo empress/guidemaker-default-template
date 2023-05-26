@@ -1,10 +1,13 @@
-<footer id="ember105" class="es-footer ember-view" role="contentinfo">
+<footer class="es-footer ember-view" role="contentinfo">
     <div class="footer responsive">
       <div class="container space-between">
-        <div id="ember106" class="footer-info flex-1">
+        <div class="footer-info flex-1">
           {{if this.guidemaker.copyright this.guidemaker.copyright this.guidemaker.title}} &copy; {{this.currentYear}}
         </div>
-        <div id="ember114" class="footer-statement footer-social">
+        <div class="footer-statement">
+          <p>An open source translation of <a href="https://guides.emberjs.com" target="_blank" rel="noopener noreferrer">Ember.js Guides</a></p>
+        </div>
+        <div class="footer-statement footer-social">
             {{#if this.guidemaker.social.twitter}}
               <a href="http://twitter.com/{{this.guidemaker.social.twitter}}" target="_blank" title="Twitter" rel="noopener noreferrer">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
@@ -28,8 +31,9 @@
               </a>
             {{/if}}
         </div>
-        <div id="ember118" class="footer-info flex-1 text-align-right">
-          Built with <a href="https://github.com/empress/guidemaker" target="_blank" rel="noopener noreferrer">Guidemaker</a>
+        <div class="footer-info flex-1 text-align-right">
+          <p>Built with <a href="https://github.com/empress/guidemaker" target="_blank" rel="noopener noreferrer">Guidemaker</a></p>
+          <p>Hosted by <a href="{{this.guidemaker.host.site}}" target="_blank" rel="noopener noreferrer">{{this.guidemaker.host.name}}</a></p>
         </div>
       </div>
     </div>

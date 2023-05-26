@@ -26,6 +26,7 @@ module.exports = function (environment) {
 
     guidemaker: {
       title: 'Guidemaker Ember Locale Template',
+      sourceRepo: 'https://github.com/DazzlingFugu/ember-fr-guides-source',
       description: 'Guides - Built with Guidemaker',
       mascots: {
         tomster: { image: '/images/mascots/tomster.png', name: 'Tomster' },

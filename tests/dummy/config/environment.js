@@ -30,6 +30,9 @@ module.exports = function (environment) {
       mascots: {
         tomster: { image: '/images/mascots/tomster.png', name: 'Tomster' },
         zoey: { image: '/images/mascots/zoey.png', name: 'Zoey' },
+      },
+      components: {
+        footer: 'dummy-footer'
       }
     },
 

@@ -1,23 +1,7 @@
 {{! template-lint-disable no-redundant-landmark-role link-rel-noopener require-valid-alt-text no-curly-component-invocation }}
 <HeadLayout />
 
-<header class="header">
-  <nav role="navigation" aria-label="main" class="container">
-    <a href={{root-url "/"}} class="logo">
-      {{#if this.guidemaker.logo}}
-        <img src={{this.guidemaker.logo}}>
-      {{else}}
-        <span>
-          {{this.guidemaker.title}}
-        </span>
-      {{/if}}
-    </a>
-
-    <form>
-      {{search-input projectVersion=this.page.currentVersion}}
-    </form>
-  </nav>
-</header>
+<GuidemakerHeader />
 
 <main class="container">
   {{outlet}}

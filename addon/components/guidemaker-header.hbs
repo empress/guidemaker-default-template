@@ -1,0 +1,17 @@
+<header class="header">
+  <nav aria-label="main" class="container">
+    <a href={{root-url "/"}} class="logo">
+      {{#if this.guidemaker.logo}}
+        <img src={{this.guidemaker.logo}} alt="" role="presentation" />
+      {{else}}
+        <span>
+          {{this.guidemaker.title}}
+        </span>
+      {{/if}}
+    </a>
+    <span>{{this.guidemaker.description}}</span>
+    <form>
+      <SearchInput projectVersion={{this.page.currentVersion}} />
+    </form>
+  </nav>
+</header>

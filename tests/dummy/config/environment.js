@@ -26,7 +26,7 @@ module.exports = function (environment) {
 
     guidemaker: {
       title: 'Guidemaker Ember Locale Template',
-      description: 'Guides - Built with Guidemaker',
+      description: 'A Guidemaker template to translate Ember.js Guides in any language',
       sourceRepo: 'https://github.com/DazzlingFugu/ember-fr-guides-source',
       host: {
         name: 'Netlify',

@@ -97,5 +97,8 @@
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
-  }
+  },
+  "fastbootDependencies": [
+    "crypto"
+  ]
 }

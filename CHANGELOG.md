@@ -1,3 +1,10 @@
+v6.0.0 / 2023-06-09
+==================
+
+  * breaking: drop support for node 14 #44 from @mansona
+  * update to v4.12 with ember-cli-update #43 from @mansona
+  * update ember-collapsible-panel #42 from @mansona
+
 v5.1.0 / 2023-04-21
 ==================
 

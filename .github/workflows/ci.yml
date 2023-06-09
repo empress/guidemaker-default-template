@@ -67,9 +67,6 @@ jobs:
           - ember-lts-4.8
           - ember-release
           - ember-classic
-          - embroider-safe
-          - embroider-optimized
-          - no-deprecations
 
     steps:
       - uses: actions/checkout@v3
@@ -98,6 +95,12 @@ jobs:
           - ember-canary
           - ember-beta
           - ember-release-no-deprecations
+          # embroider tests failing because of https://github.com/embroider-build/embroider/pull/1463
+          - embroider-safe
+          - embroider-optimized
+          # deprecations miss reported on 4.12 because of https://github.com/emberjs/ember.js/issues/20377
+          - no-deprecations
+
 
     steps:
       - uses: actions/checkout@v3

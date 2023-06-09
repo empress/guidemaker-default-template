@@ -24,6 +24,9 @@ module.exports = async function () {
           devDependencies: {
             'ember-source': '~3.20.5',
           },
+          overrides: {
+            'ember-source': '$ember-source',
+          },
         },
       },
       {
@@ -32,6 +35,9 @@ module.exports = async function () {
           devDependencies: {
             'ember-source': '~3.24.3',
           },
+          overrides: {
+            'ember-source': '$ember-source',
+          },
         },
       },
       {
@@ -39,6 +45,14 @@ module.exports = async function () {
         npm: {
           devDependencies: {
             'ember-source': '~3.28.0',
+          },
+        },
+      },
+      {
+        name: 'ember-lts-4.4',
+        npm: {
+          devDependencies: {
+            'ember-source': '~4.4.0',
           },
         },
       },

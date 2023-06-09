@@ -12,6 +12,8 @@ module.exports = async function () {
           devDependencies: {
             'ember-source': '~3.16.0',
             'ember-maybe-in-element': '2.0.3',
+            'ember-qunit': '6.0.0',
+            'ember-data': '3.16.0',
           },
           overrides: {
             'ember-source': '$ember-source',
@@ -23,6 +25,8 @@ module.exports = async function () {
         npm: {
           devDependencies: {
             'ember-source': '~3.20.5',
+            'ember-qunit': '6.0.0',
+            'ember-data': '3.20.0',
           },
           overrides: {
             'ember-source': '$ember-source',
@@ -34,6 +38,8 @@ module.exports = async function () {
         npm: {
           devDependencies: {
             'ember-source': '~3.24.3',
+            'ember-qunit': '6.0.0',
+            'ember-data': '3.24.0',
           },
           overrides: {
             'ember-source': '$ember-source',
@@ -46,6 +52,9 @@ module.exports = async function () {
           devDependencies: {
             'ember-source': '~3.28.0',
           },
+          overrides: {
+            'ember-source': '$ember-source',
+          },
         },
       },
       {
@@ -53,6 +62,9 @@ module.exports = async function () {
         npm: {
           devDependencies: {
             'ember-source': '~4.4.0',
+          },
+          overrides: {
+            'ember-source': '$ember-source',
           },
         },
       },
@@ -112,6 +124,9 @@ module.exports = async function () {
           },
           ember: {
             edition: 'classic',
+          },
+          overrides: {
+            'ember-source': '$ember-source',
           },
         },
       },

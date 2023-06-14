@@ -1,16 +1,16 @@
 {{!-- template-lint-disable no-triple-curlies no-curly-component-invocation no-implicit-this --}}
-{{#if result.path}}
+{{#if @result.path}}
 <div class="algolia-docsearch-suggestion
 algolia-docsearch-suggestion__secondary">
   <div class="algolia-docsearch-suggestion--wrapper">
     <div class="algolia-docsearch-suggestion--subcategory-column">
-      <span class="algolia-docsearch-suggestion--subcategory-column-text">{{sectionTitle}}</span>
+      <span class="algolia-docsearch-suggestion--subcategory-column-text">{{this.sectionTitle}}</span>
     </div>
     <div class="algolia-docsearch-suggestion--content">
 
-      <a href="{{href-to 'version.show' result.path}}#{{result.anchor}}" data-href-to-ignore>
+      <a href="{{href-to 'version.show' @result.path}}#{{@result.anchor}}" data-href-to-ignore>
         <div class="algolia-docsearch-suggestion--title">
-          {{#each remainingHeadings as |heading index|}}
+          {{#each this.remainingHeadings as |heading index|}}
             {{#if index}}
               >
             {{/if}}

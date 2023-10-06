@@ -14,7 +14,7 @@ algolia-docsearch-suggestion__secondary">
             {{#if index}}
               >
             {{/if}}
-            {{{heading.value}}}
+            {{this.sanitize heading.value}}
           {{/each}}
         </div>
       </a>

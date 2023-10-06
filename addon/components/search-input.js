@@ -29,6 +29,7 @@ export default Component.extend({
     const { algoliaId, algoliaKey, indexName } = config['algolia'] || {};
 
     if(algoliaId && algoliaKey && indexName) {
+      this.searchFunction = true;
       this.client = algoliasearch(algoliaId, algoliaKey);
       this.index = this.client.initIndex(indexName);
     }
@@ -43,14 +44,9 @@ export default Component.extend({
 
     const searchObj = {
       hitsPerPage: 15,
-      query
     };
 
-    if(this.projectVersion && this.projectVersion.match(/\d+\.\d+\.\d+/)) {
-      searchObj.facetFilters = [[`version:${this.projectVersion}`]];
-    }
-
-    let res = yield this.index.search(searchObj);
+    let res = yield this.index.search(query, searchObj);
 
     return set(this, 'response', res);
   }).restartable(),

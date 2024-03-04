@@ -1,0 +1,3 @@
+packages:
+  - 'guidemaker-default-template'
+  - 'test-app'

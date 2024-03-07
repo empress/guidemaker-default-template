@@ -6,7 +6,14 @@ const webpackConfig = {
   module: {
     rules: [
       {
-        test: /\.(png|svg|jpg|jpeg|gif|webp|woff|woff2|ttf|eot)$/i,
+        test: function (specifier) {
+          return !specifier.endsWith('.css') && !specifier.endsWith('.js');
+        },
+        issuer: function (issuer) {
+          if (issuer.endsWith('.css')) {
+            return true;
+          }
+        },
         type: 'asset/resource',
       },
     ],

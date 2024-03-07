@@ -18,19 +18,20 @@ jobs:
     timeout-minutes: 10
 
     steps:
-      - uses: actions/checkout@v3
-      - name: Install Node
-        uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v3
         with:
-          node-version: 16.x
-          cache: npm
+          version: 8
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: pnpm
       - name: Install Dependencies
-        run: npm ci
+        run: pnpm install --frozen-lockfile
       - name: Lint
-        run: npm run lint
+        run: pnpm lint
       - name: Run Tests
-        run: npm run test:ember
-      - run: npm run build
+        run: pnpm test
 
   floating:
     name: "Floating Dependencies"
@@ -38,57 +39,57 @@ jobs:
     timeout-minutes: 10
 
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v3
         with:
-          node-version: 16.x
-          cache: npm
+          version: 8
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: pnpm
       - name: Install Dependencies
-        run: npm install --no-package-lock
+        run: pnpm install --no-lockfile
       - name: Run Tests
-        run: npm run test:ember
-      - run: npm run build
+        run: pnpm test
 
   try-scenarios:
     name: ${{ matrix.try-scenario }}
     runs-on: ubuntu-latest
-    needs: "test"
+    needs: 'test'
     timeout-minutes: 10
 
     strategy:
       fail-fast: false
       matrix:
         try-scenario:
-          - ember-lts-3.16
-          - ember-lts-3.20
-          - ember-lts-3.24
           - ember-lts-3.28
           - ember-lts-4.4
           - ember-lts-4.8
+          - ember-lts-4.12
+          - ember-lts-5.4
           - ember-release
-          - ember-classic
           - embroider-safe
-          - embroider-optimized
 
     steps:
-      - uses: actions/checkout@v3
-      - name: Install Node
-        uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v3
         with:
-          node-version: 16.x
-          cache: npm
+          version: 8
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: pnpm
       - name: Install Dependencies
-        run: npm ci
+        run: pnpm install --frozen-lockfile
       - name: Run Tests
         run: ./node_modules/.bin/ember try:one ${{ matrix.try-scenario }} --skip-cleanup
-      - run: npm run build
+        working-directory: test-app
 
   allow-fail-try-scenarios:
-    name: ${{ matrix.try-scenario }} - Allowed to fail
+    name: ${{ matrix.try-scenario }}
     runs-on: ubuntu-latest
-    needs: "test"
-    permissions:
-      pull-requests: write
+    needs: 'test'
+    timeout-minutes: 10
 
     strategy:
       fail-fast: false
@@ -97,22 +98,29 @@ jobs:
           - ember-canary
           - ember-beta
           - ember-release-no-deprecations
-          # deprecations miss reported on 4.12 because of https://github.com/emberjs/ember.js/issues/20377
+
+          # this needs a fix in ember-cli-fastboot before it will ever pass
+          - embroider-optimized
+
+          # our current deprecations are coming from guidemaker so they need to be fixed there
           - no-deprecations
 
 
     steps:
-      - uses: actions/checkout@v3
-      - name: Install Node
-        uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v3
         with:
-          node-version: 16.x
-          cache: npm
+          version: 8
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: pnpm
       - name: Install Dependencies
-        run: npm ci
+        run: pnpm install --frozen-lockfile
       - name: Run Tests
         id: tests
-        run: ./node_modules/.bin/ember try:one ${{ matrix.try-scenario }}
+        run: ./node_modules/.bin/ember try:one ${{ matrix.try-scenario }} --skip-cleanup
+        working-directory: test-app
         continue-on-error: true
       - uses: mainmatter/continue-on-error-comment@v1
         with:

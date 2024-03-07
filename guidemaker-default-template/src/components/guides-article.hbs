@@ -19,7 +19,7 @@
     </h1>
     <hr>
 
-    {{markdown-to-html @model.content extensions='showdown-section-groups'}}
+    <MarkdownToHtml @markdown={{@model.content}} @extensions='showdown-section-groups' />
 
     {{chapter-links pages=@pages}}
   </div>

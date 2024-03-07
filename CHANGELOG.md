@@ -1,5 +1,20 @@
 # Changelog
 
+## Release (2024-03-07)
+
+guidemaker-default-template 7.0.0 (major)
+
+#### :boom: Breaking Change
+* `guidemaker-default-template`, `test-app`
+  * [#49](https://github.com/empress/guidemaker-default-template/pull/49) convert to a v2 addon ([@mansona](https://github.com/mansona))
+
+#### :house: Internal
+* [#50](https://github.com/empress/guidemaker-default-template/pull/50) start using release-plan ([@mansona](https://github.com/mansona))
+* [#46](https://github.com/empress/guidemaker-default-template/pull/46) stop embroider tests being "allowed to fail" ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
 v6.0.1 / 2023-06-09
 ==================
 

@@ -1,0 +1,17 @@
+{
+  "solution": {
+    "guidemaker-default-template": {
+      "impact": "major",
+      "oldVersion": "6.0.1",
+      "newVersion": "7.0.0",
+      "constraints": [
+        {
+          "impact": "major",
+          "reason": "Appears in changelog section :boom: Breaking Change"
+        }
+      ],
+      "pkgJSONPath": "./guidemaker-default-template/package.json"
+    }
+  },
+  "description": "## Release (2024-03-07)\n\nguidemaker-default-template 7.0.0 (major)\n\n#### :boom: Breaking Change\n* `guidemaker-default-template`, `test-app`\n  * [#49](https://github.com/empress/guidemaker-default-template/pull/49) convert to a v2 addon ([@mansona](https://github.com/mansona))\n\n#### :house: Internal\n* [#50](https://github.com/empress/guidemaker-default-template/pull/50) start using release-plan ([@mansona](https://github.com/mansona))\n* [#46](https://github.com/empress/guidemaker-default-template/pull/46) stop embroider tests being \"allowed to fail\" ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
+}
